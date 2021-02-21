@@ -71,7 +71,7 @@ class _SettingPageState extends State<SettingPage> {
                     _isDarkTheme = val;
                     sharedPref(_isDarkTheme);
                   });
-                  if (getBoolValuesSF()) {
+                  if (_isDarkTheme) {
                     Get.changeTheme(ThemeData.dark());
                     _riveArtboard.removeController(_controller);
                     _riveArtboard.addController(
@@ -81,7 +81,6 @@ class _SettingPageState extends State<SettingPage> {
                         snackPosition: SnackPosition.BOTTOM);
                   } else {
                     Get.changeTheme(ThemeData.light());
-                    Get.changeTheme(ThemeData(primarySwatch: Colors.blueGrey));
                     _riveArtboard.removeController(_controller);
                     _riveArtboard.addController(
                         _controller = SimpleAnimation('to_light'));

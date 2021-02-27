@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:rive/rive.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+final Color backgroundColor = Color(0xFF4A4A58);
+
 class SettingPage extends StatefulWidget {
   @override
   _SettingPageState createState() => _SettingPageState();
@@ -81,6 +83,7 @@ class _SettingPageState extends State<SettingPage> {
                         snackPosition: SnackPosition.BOTTOM);
                   } else {
                     Get.changeTheme(ThemeData.light());
+                    Get.changeTheme(ThemeData(primarySwatch: Colors.blueGrey));
                     _riveArtboard.removeController(_controller);
                     _riveArtboard.addController(
                         _controller = SimpleAnimation('to_light'));

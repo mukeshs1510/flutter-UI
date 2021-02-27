@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -68,15 +66,12 @@ class _DrawerMenuState extends State<DrawerMenu>
                 Container(
                     height: 100,
                     width: 100,
-                    margin: EdgeInsets.only(left: 20),
+                    margin: EdgeInsets.only(left: 16, bottom: 10),
                     child: CircleAvatar(
                       radius: 40,
                       backgroundImage: NetworkImage(
                           "https://sdk.bitmoji.com/render/panel/853b9378-b5c2-4a12-9bf8-efcdc45f465d-b93dde4d-c80d-4c9f-a0af-70cbc082671e-v1.png?transparent=1&palette=1"),
                     )),
-                SizedBox(
-                  height: 10,
-                ),
                 Container(
                   margin: EdgeInsets.only(left: 16),
                   child: Text(
@@ -230,7 +225,6 @@ class _DrawerMenuState extends State<DrawerMenu>
               ? BorderRadius.all(Radius.circular(0))
               : BorderRadius.all(Radius.circular(30)),
           elevation: 8,
-          color: backgroundColor,
           child: SafeArea(
             child: Container(
               padding: const EdgeInsets.only(left: 16, right: 16, top: 15),
@@ -244,7 +238,6 @@ class _DrawerMenuState extends State<DrawerMenu>
                       InkWell(
                         child: Icon(
                           Icons.menu,
-                          color: Colors.white,
                           size: 26,
                         ),
                         onTap: () {
@@ -260,12 +253,12 @@ class _DrawerMenuState extends State<DrawerMenu>
                       ),
                       Text(
                         "Dashboard",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       InkWell(
                         child: Icon(
                           Icons.settings,
-                          color: Colors.white,
                           size: 26,
                         ),
                         onTap: () {

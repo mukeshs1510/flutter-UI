@@ -6,11 +6,15 @@ void main() {
   runApp(MyApp());
 }
 
+final Color backgroundColor = Color(0xFF4A4A58);
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(visualDensity: VisualDensity.adaptivePlatformDensity),
+      theme: ThemeData(
+          primarySwatch: Colors.blueGrey,
+          visualDensity: VisualDensity.adaptivePlatformDensity),
       debugShowCheckedModeBanner: false,
       home: PhoneAuth(),
     );

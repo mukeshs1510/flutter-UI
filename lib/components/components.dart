@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-class Components extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
+const textStyle = TextStyle(
+  fontSize: 20,
+);

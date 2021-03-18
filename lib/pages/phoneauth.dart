@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glass_blured/pages/drawer_menu.dart';
 import 'package:glass_blured/pages/home_page.dart';
+import 'package:glass_blured/pages/settings_page.dart';
 import 'package:glass_blured/pages/wallet.dart';
 
 class PhoneAuth extends StatefulWidget {
@@ -31,21 +32,28 @@ class _PhoneAuthState extends State<PhoneAuth> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        RaisedButton(
-          onPressed: () {
-            Get.to(() => WalletPage());
-          },
-          child: Text("Wallet"),
-        ),
+        // RaisedButton(
+        //   onPressed: () {
+        //     Get.to(() => WalletPage());
+        //   },
+        //   child: Text("Wallet"),
+        // ),
+        ElevatedButton(
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0))),
+            onPressed: () {
+              Get.to(() => WalletPage());
+            },
+            child: Text("Wallet")),
         SizedBox(
           height: 30,
         ),
-        RaisedButton(
-          onPressed: () {
-            Get.to(() => HomePage());
-          },
-          child: Text("HomePage"),
-        ),
+        ElevatedButton(
+            onPressed: () {
+              Get.to(() => SettingPage());
+            },
+            child: Text("Settings")),
       ],
     ));
   }

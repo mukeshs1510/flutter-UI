@@ -70,10 +70,10 @@ class _WalletPageState extends State<WalletPage> {
                   SizedBox(
                     height: 20,
                   ),
-                  RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
+                  ElevatedButton(
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(8.0),
+                    // ),
                     child: Container(
                       margin: const EdgeInsets.all(8),
                       child: const Text(
@@ -84,7 +84,7 @@ class _WalletPageState extends State<WalletPage> {
                         ),
                       ),
                     ),
-                    color: const Color(0xff1b447b),
+                    // color: const Color(0xff1b447b),
                     onPressed: () {
                       if (formKey.currentState.validate()) {
                         print('valid!');

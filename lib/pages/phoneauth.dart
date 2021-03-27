@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glass_blured/pages/drawer_menu.dart';
 import 'package:glass_blured/pages/home_page.dart';
+import 'package:glass_blured/pages/photos_api.dart';
 import 'package:glass_blured/pages/settings_page.dart';
 import 'package:glass_blured/pages/wallet.dart';
 
@@ -54,6 +55,15 @@ class _PhoneAuthState extends State<PhoneAuth> {
               Get.to(() => SettingPage());
             },
             child: Text("Settings")),
+
+        SizedBox(
+          height: 30,
+        ),
+        ElevatedButton(
+            onPressed: () {
+              Get.to(() => PhotosAPi());
+            },
+            child: Text("PhotosApi App")),
       ],
     ));
   }

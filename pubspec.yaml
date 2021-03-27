@@ -21,12 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  swipedetector: 1.2.0
-  shared_preferences: ^0.5.12+4
+  shared_preferences: ^2.0.5
   rive: ^0.6.7
   flutter:
     sdk: flutter
-  google_fonts:
+
+  google_fonts: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -34,6 +34,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   get: ^3.25.4
   flutter_credit_card: ^0.1.4
+  http: ^0.13.1
 
 dev_dependencies:
   flutter_test:
